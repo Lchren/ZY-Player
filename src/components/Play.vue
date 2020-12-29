@@ -978,9 +978,11 @@ export default {
       this.isTop = this.appState.windowIsOnTop
     },
     closeListEvent () {
-      this.right.show = false
-      this.right.type = ''
-      this.state.showChannelList = false
+      setTimeout(() => {
+        this.right.show = false
+        this.right.type = ''
+        this.state.showChannelList = false
+      }, 50)
     },
     exportM3u8 () {
       const m3u8Arr = []
